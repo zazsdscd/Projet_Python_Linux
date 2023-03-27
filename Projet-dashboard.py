@@ -9,6 +9,8 @@ from dash.dependencies import Input, Output
 
 # Chargement des données
 df = pd.read_csv('/home/ubuntu/prices.csv', sep=',', names=['Date', 'prix'], na_values=[''])
+df['prix'].replace('', 0, inplace=True)
+df['prix'] = pd.to_numeric(df['prix'], errors='coerce')
 df['prix'] = df['prix'].astype(float)
 df['Date'] = pd.to_datetime(df['Date'])
 ts = pd.Series(df['prix'].values, index=df['Date'])
