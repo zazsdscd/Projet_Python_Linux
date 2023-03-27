@@ -1,0 +1,2 @@
+* * * * * /home/ubuntu/prix_xrp.sh
+*/5 * * * * /home/ubuntu/maj-dash.sh
