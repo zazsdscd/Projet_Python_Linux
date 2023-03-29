@@ -1,4 +1,3 @@
 ### Script de mise à jour de dash qui kill le port et relance le script python
-
-kill $(lsof -t -i:8050)
-/usr/bin/python3 /home/ubuntu/Projet_Python_Linux/Projet_dashboard.py
+sudo fuser -k 8050/tcp
+/usr/bin/python3 /home/ubuntu/Projet-dashboard.py
